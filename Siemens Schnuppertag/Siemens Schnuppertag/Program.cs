@@ -6,8 +6,22 @@ var _client = new HttpClient();
 
 Console.WriteLine("What do you want to translate?");
 var text = Console.ReadLine();
-Console.WriteLine("In which language?");
+Console.WriteLine("In which language? EN:0, IT:1, DE:2");
 var language = Console.ReadLine();
+switch (language)
+{
+    case "0":
+        language = "EN";
+        break;
+    case "1":
+        language = "IT";
+        break;
+
+    case "2":
+        language = "DE";
+        break;
+
+}
 
 Console.WriteLine("To be translate: " + text + "\nlanguage " + language + "\n");
 
